@@ -6,15 +6,18 @@ export default function SubMenu(props) {
       <ul>
         {
           <li className="btn btn-secondary subnav">
-            {props.item.text}
+            {props.item.text} 
+            <i className="fas fa-angle-down icon"></i>
             <ul className="subnav-content">
-              {props.item.subMenuItems.map((subValue, subIndex) => (
+              {
+              props.item.subMenuItems.map((subValue, subIndex) => (
                 <a href={subValue.link}>
                   <li key={subIndex} className="btn btn-secondary">
                     {subValue.text}
                   </li>
                 </a>
-              ))}
+              ))
+              }
             </ul>
           </li>
         }
@@ -23,14 +26,3 @@ export default function SubMenu(props) {
   );
 }
 
-
-
-/**
- * props.item.map((value, index) => (
-          <li key={index} className="subnav">
-            {" "}
-            {value.text}
-            
-          </li>
-        ))
- */

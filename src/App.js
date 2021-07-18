@@ -2,8 +2,10 @@ import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import TextField from "./components/Forms/TextField";
+import Select from './components/Forms/Select';
 
 function App() {
+  let options = ["Volvo", "Apple"]
   let navItems = [
     { hasSubMenu: false, link: "https://www.google.com", text: "Item 1" },
     { hasSubMenu: false, link: "https://www.bing.com", text: "Item 2" },
@@ -25,8 +27,8 @@ function App() {
       <Navigation items={navItems} cssClass="btn btn-secondary" />
 
       <TextField type="text" placeholder="Search" />
-
       <hr />
+      <Select name="cars" options={options} />
     </>
   );
 }

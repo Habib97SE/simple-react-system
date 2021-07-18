@@ -17,6 +17,10 @@ main {
     line-height: 100vh
 }
 
+.icon {
+    margin-left: 5px;
+}
+
 .left {
     float: left;
 }
@@ -201,7 +205,7 @@ main {
 
 /* Forms */
 input[type="text"],
-input[type="password"] {
+input[type="password"], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
