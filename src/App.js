@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
-import Button from "./components/Button/Button";
 import TextField from "./components/Forms/TextField";
 
 function App() {
