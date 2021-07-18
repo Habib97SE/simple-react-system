@@ -7,10 +7,6 @@ function App() {
   let navItems = [
     { hasSubMenu: false, link: "https://www.google.com", text: "Item 1" },
     { hasSubMenu: false, link: "https://www.bing.com", text: "Item 2" },
-    { hasSubMenu: false, link: "https://www.google.com", text: "Item 3" },
-    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 4" },
-    { hasSubMenu: false, link: "https://www.google.com", text: "Item 5" },
-    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 6" },
     {
       hasSubMenu: true,
       text: "SubMenu Item",
@@ -19,6 +15,10 @@ function App() {
         { link: "https://www.twitter.com", text: "Twitter" },
       ],
     },
+    { hasSubMenu: false, link: "https://www.google.com", text: "Item 3" },
+    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 4" },
+    { hasSubMenu: false, link: "https://www.google.com", text: "Item 5" },
+    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 6" },
   ];
   return (
     <>

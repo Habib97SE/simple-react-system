@@ -4,22 +4,33 @@ export default function SubMenu(props) {
   return (
     <nav className="navbar">
       <ul>
-        {props.items.map((value, index) => (
-          <li key={index} className="subnav">
-            {" "}
-            {value.text}
+        {
+          <li className="btn btn-secondary subnav">
+            {props.item.text}
             <ul className="subnav-content">
-              {value.subMenuItems.map((subValue, subIndex) => (
+              {props.item.subMenuItems.map((subValue, subIndex) => (
                 <a href={subValue.link}>
-                  <li key={subIndex} className="">
+                  <li key={subIndex} className="btn btn-secondary">
                     {subValue.text}
                   </li>
                 </a>
               ))}
             </ul>
           </li>
-        ))}
+        }
       </ul>
     </nav>
   );
 }
+
+
+
+/**
+ * props.item.map((value, index) => (
+          <li key={index} className="subnav">
+            {" "}
+            {value.text}
+            
+          </li>
+        ))
+ */
