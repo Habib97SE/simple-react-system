@@ -6,12 +6,20 @@ import TextField from "./components/Forms/TextField";
 
 function App() {
   let navItems = [
-    { link: "https://www.google.com", text: "Item 1" },
-    { link: "https://www.bing.com", text: "Item 2" },
-    { link: "https://www.google.com", text: "Item 3" },
-    { link: "https://www.bing.com", text: "Item 4" },
-    { link: "https://www.google.com", text: "Item 5" },
-    { link: "https://www.bing.com", text: "Item 6" },
+    { hasSubMenu: false, link: "https://www.google.com", text: "Item 1" },
+    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 2" },
+    { hasSubMenu: false, link: "https://www.google.com", text: "Item 3" },
+    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 4" },
+    { hasSubMenu: false, link: "https://www.google.com", text: "Item 5" },
+    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 6" },
+    {
+      hasSubMenu: true,
+      text: "SubMenu Item",
+      subMenuItems: [
+        { link: "https://www.facebook.com", text: "Facebook" },
+        { link: "https://www.twitter.com", text: "Twitter" },
+      ],
+    },
   ];
   return (
     <>

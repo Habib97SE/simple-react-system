@@ -1,6 +1,14 @@
 import React from "react";
+import SubMenu from "./SubMenu";
 
 export default function Navigation(props) {
+  const hasSubMenu = (item) => {
+    if (item.hasSubMenu) {
+      return <SubMenu items={item} />;
+    } else {
+      return false;
+    }
+  };
   return (
     <>
       <nav className="navbar">
