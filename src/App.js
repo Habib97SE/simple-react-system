@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import TextField from "./components/Forms/TextField";
 import Select from './components/Forms/Select';
 
 function App() {
-  let options = ["Volvo", "Apple"]
+  const [name, setName] = useState("");
+  let options = ["MSFT", "AAPL", "TSLA", "SQ"]
+
   let navItems = [
     { hasSubMenu: false, link: "https://www.google.com", text: "Item 1" },
     { hasSubMenu: false, link: "https://www.bing.com", text: "Item 2" },
@@ -22,13 +24,22 @@ function App() {
     { hasSubMenu: false, link: "https://www.google.com", text: "Item 5" },
     { hasSubMenu: false, link: "https://www.bing.com", text: "Item 6" },
   ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`submitting the: ${name}`);
+  }
   return (
     <>
       <Navigation items={navItems} cssClass="btn btn-secondary" />
-
-      <TextField type="text" placeholder="Search" />
-      <hr />
-      <Select name="cars" options={options} />
+      {/* Form */}
+      <form method="Post" onSubmit={handleSubmit}>
+      <input type="text" value={name} 
+      onChange={e => setName(e.target.value)}
+      />
+      <Select label="Company:" name="cars" options={options} />
+      <input type="submit" className="btn btn-primary"  />
+      </form>
     </>
   );
 }

@@ -4,6 +4,8 @@ export default function Select(props)
 {
     return (
         <>
+            <div className="form-control">
+            <label>{ props.label }</label>
             <select name={props.name}>
                 {
                     props.options.map( (value, index) => (
@@ -11,6 +13,7 @@ export default function Select(props)
                     ))
                 }
             </select>
+            </div>
         </>
     );
 }

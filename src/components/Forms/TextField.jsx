@@ -3,7 +3,11 @@ import React from "react";
 export default function TextField(props) {
   return (
     <>
-      <input type={props.type} placeholder={props.placeholder} />
+      <div className="form-control">
+        <label>{ props.label }</label>
+      <input 
+       value={props.value} type={props.type} placeholder={props.placeholder} />
+      </div>
     </>
   );
 }
