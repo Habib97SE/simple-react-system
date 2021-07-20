@@ -1,0 +1,25 @@
+.login-btn {
+    width: 100%;
+}
+
+.white-box {
+    margin-top: 100px;
+    width: 20%;
+    margin: auto;
+    padding: 15px;
+    border: 1px #f2f2f2;
+    padding: 10px;
+    box-shadow: 0 5px 10px #f2f2f2;
+    border-radius: 7px;
+
+}
+
+input {
+    background-color: #f2f2f2;
+}
+
+label {
+    font-size: 1.2rem;
+    padding-left: 10px;
+
+}
