@@ -4,7 +4,7 @@ import SubMenu from "./SubMenu";
 export default function Navigation(props) {
   const checkNavItem = (value, index) => {
     return value.hasSubMenu ? (
-      <SubMenu item={value} />
+      <li className="btn btn-secondary subnav"><SubMenu item={value} /></li>
     ) : (
       createNavItem(value, index)
     );

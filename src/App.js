@@ -6,24 +6,6 @@ import Select from "./components/Forms/Select";
 
 function App() {
   const [name, setName] = useState("");
-  let options = ["MSFT", "AAPL", "TSLA", "SQ"];
-
-  let navItems = [
-    { hasSubMenu: false, link: "https://www.google.com", text: "Item 1" },
-    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 2" },
-    {
-      hasSubMenu: true,
-      text: "SubMenu Item",
-      subMenuItems: [
-        { link: "https://www.facebook.com", text: "Facebook" },
-        { link: "https://www.twitter.com", text: "Twitter" },
-      ],
-    },
-    { hasSubMenu: false, link: "https://www.google.com", text: "Item 3" },
-    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 4" },
-    { hasSubMenu: false, link: "https://www.google.com", text: "Item 5" },
-    { hasSubMenu: false, link: "https://www.bing.com", text: "Item 6" },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,13 +13,37 @@ function App() {
   };
   return (
     <>
-      <Navigation items={navItems} cssClass="btn btn-secondary" />
-      {/* Form */}
-      <form method="Post" onSubmit={handleSubmit}>
-        <TextField label="Name:" type="text" />
-        <Select label="Company:" name="cars" options={options} />
-        <input type="submit" className="btn btn-primary" />
-      </form>
+      <header>
+        <div className="container">
+          <div className="flex-item">
+            <nav>
+              <ul>
+                <li>Logo</li>
+                <li>
+                  <a href="https://google.com">Google</a>
+                </li>
+                <li>
+                  <a href="https://google.com">Google</a>
+                </li>
+                <li>
+                  <a href="https://google.com">Google</a>
+                </li>
+                <li>
+                  <a href="https://google.com">Google</a>
+                </li>
+                <li>
+                  <a href="https://google.com">Google</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="flex-item">
+            <input type="text" placeholder="Search ..." />
+          </div>
+        </div>
+      </header>
+      <section>Section</section>
+      <footer>Footer</footer>
     </>
   );
 }

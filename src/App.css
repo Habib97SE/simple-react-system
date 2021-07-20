@@ -17,6 +17,17 @@ main {
     line-height: 100vh
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+}
+.flex-item {
+    flex-grow: 2;
+}
+
 .icon {
     margin-left: 5px;
 }
