@@ -4,14 +4,24 @@ import Button from "../components/Button/Button";
 export default function Login(props) {
   return (
     <>
-      <div className="white-box">
+      <div className="white-box container">
+        <div className="flex-item">
         <TextField
           label="Usernmame:"
           placeholder="myEmail@mydomain.com"
           type="email"
+          id="email-address"
         />
-        <TextField label="Password:" type="password" />
-        <Button cssClass="btn btn-primary login-btn" text="Login" />
+        </div>
+        <div className="flex-item">
+        <TextField label="Password:" type="password" id="password"/>
+          </div>
+          <Button 
+            before={false}
+            cssClass="btn btn-primary login-btn flex-item" 
+            icon="fas fa-sign-in-alt" 
+            text="Login" 
+          />
         <p className="center">Forgot your password?</p>
       </div>
     </>

@@ -4,9 +4,9 @@ export default function TextField(props) {
   return (
     <>
       <div className="form-control">
-        <label>{ props.label }</label>
+        <label for={props.id}>{ props.label }</label>
       <input 
-       value={props.value} type={props.type} placeholder={props.placeholder} />
+       value={props.value} id={props.id} type={props.type} placeholder={props.placeholder} />
       </div>
     </>
   );

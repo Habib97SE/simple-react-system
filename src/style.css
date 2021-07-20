@@ -1,7 +1,6 @@
 .login-btn {
-    width: 100%;
+    font-size: 1.3rem;
 }
-
 .white-box {
     margin-top: 100px;
     width: 20%;
@@ -11,7 +10,7 @@
     padding: 10px;
     box-shadow: 0 5px 10px #f2f2f2;
     border-radius: 7px;
-
+    
 }
 
 input {
@@ -21,5 +20,23 @@ input {
 label {
     font-size: 1.2rem;
     padding-left: 10px;
-
 }
+
+.container {
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+      .white-box {
+          width: 90%;
+          margin: auto;
+      }  
+}
+
+@media only screen and (min-width: 601px) and (max-width: 899px) {
+    .white-box {
+        width: 60%;
+        margin: auto;
+    }  
+}
+
