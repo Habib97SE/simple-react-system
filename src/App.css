@@ -236,3 +236,53 @@ select {
     border-radius: 4px;
 
 }
+
+
+/* Text */
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.text-success {
+    color: #198754;
+}
+
+.text-info {
+    color: #ffc107;
+}
+
+/* Bckground Color  */
+
+.bg-danger {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 1vw;
+}
+
+.bg-success {
+    background-color: #198754;
+    color: #fff;
+    padding: 1vw;
+}
+
+.bg-info {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 1vw;
+}
