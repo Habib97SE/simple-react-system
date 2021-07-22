@@ -26,6 +26,18 @@ label {
     flex-direction: column;
 }
 
+.singup-text {
+    color: #000;
+}
+
+.singup-text:hover {
+    border-bottom: 1px solid #000;
+}
+
+.subnav a {
+    color: #000;
+}
+
 @media only screen and (max-width: 600px) {
       .white-box {
           width: 90%;

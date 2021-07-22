@@ -1,5 +1,11 @@
 import React from "react";
 import SubMenu from "./SubMenu";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export default function Navigation(props) {
   const checkNavItem = (value, index) => {
@@ -13,14 +19,21 @@ export default function Navigation(props) {
     return (
       <nav>
         <ul>
-          <a href={item.link}>
+          
             <li key={index} className={props.cssClass}>
-              {item.text}
+            <Link to={item.link}>{item.text}</Link>
             </li>
-          </a>
         </ul>
       </nav>
     );
   };
-  return <>{props.items.map((value, index) => checkNavItem(value, index))}</>;
+  return (<>
+  <nav>
+    <ul>
+    {props.items.map((value, index) => checkNavItem(value, index))}
+      </ul>  
+  </nav>
+  
+  </>
+  );
 }
