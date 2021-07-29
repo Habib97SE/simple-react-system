@@ -29,6 +29,14 @@ main {
     flex-grow: 2;
 }
 
+
+header,
+section {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
 .icon {
     margin-left: 5px;
 }
@@ -148,7 +156,13 @@ main {
 .slideshow {
     margin: 0 auto;
     overflow: hidden;
-    max-width: 500px;
+    width: 100%;
+
+}
+
+.slideshow img {
+    max-width: 100%;
+    margin-top: 20px;
 }
 
 .slideshowSlider {
@@ -158,18 +172,18 @@ main {
 
 .slide {
     display: inline-block;
-    height: 400px;
     width: 100%;
     border-radius: 7px;
 }
 
-/* Buttons */
+/* Slideshow > Buttons */
 
 .slideshowDots {
     text-align: center
 }
 
 .slideshowDot {
+    padding-top: 30px;
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -285,4 +299,31 @@ p {
     background-color: #ffc107;
     color: #fff;
     padding: 1vw;
+}
+
+
+/* article */
+.article {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+
+.article-img {
+    height: 400px;
+    min-width: 100%;
+    border-radius: 7px;
+}
+
+.article>footer {
+    padding: 20px;
+}
+
+.navbar-brand {
+    padding-left: 30px;
+}
+
+.head-img img {
+    width: 100%;
+    max-height: 400px;
 }

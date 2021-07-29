@@ -1,59 +1,39 @@
 import React from "react";
 import "./App.css";
 import "./style.css";
-import Login from "./Pages/Login";
-import Text from "./components/Text/Text";
-import Signup from "./Pages/Signup";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Navigation from './components/Navigation/Navigation';
-import Home from './Pages/Home';
+import "bootstrap/dist/css/bootstrap.css";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
-
-  let navItems = [
-    { hasSubMenu: false, link: "/Signup", text: "Signup"
+  let navItem = [
+    {
+      link: "/home",
+      text: "Home",
     },
-    { hasSubMenu: false, link: "Login", text: "Login"
+    {
+      link: "/about-us",
+      text: "About us",
     },
-    { hasSubMenu: false, link: "/", text: "Home"
+    {
+      link: "/contact-us",
+      text: "Contact us",
     },
-  ]
-
+    {
+      link: "/services",
+      text: "Services",
+    },
+  ];
   return (
     <>
-      <Router>
-        <nav className="navbar">
-        <ul>
-        <li className="subnav btn btn-primary">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="subnav btn btn-primary">
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li className="subnav btn btn-primary">
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
-        </nav>
-          
-        <Switch>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+      <header>
+        <Header navItem={navItem} />
+      </header>
+      <section>
+        <Main />
+      </section>
     </>
   );
 }
+
 export default App;

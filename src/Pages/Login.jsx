@@ -7,11 +7,7 @@ export default function Login(props) {
   return (
     <>
       <div className="white-box container">
-        <Text
-          text="Hello world"
-          textType="h1"
-          cssClass="bg-danger center text-info"
-        />
+        <Text text="Login" textType="h1" cssClass="center" />
         <div className="flex-item">
           <TextField
             label="Usernmame:"
@@ -35,6 +31,13 @@ export default function Login(props) {
             textType="p"
             cssClass="text-success center"
           />
+          <a href="/signup">
+            <Text
+              text="Don't have account? Register one here"
+              textType="p"
+              cssClass="center"
+            />
+          </a>
         </a>
       </div>
     </>

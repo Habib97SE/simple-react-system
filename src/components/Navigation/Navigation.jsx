@@ -1,39 +1,27 @@
 import React from "react";
 import SubMenu from "./SubMenu";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import NavItem from "./NavItem";
+import Nav from "react-bootstrap/Nav";
 
 export default function Navigation(props) {
-  const checkNavItem = (value, index) => {
-    return value.hasSubMenu ? (
-      <li className="btn btn-secondary subnav"><SubMenu item={value} /></li>
-    ) : (
-      createNavItem(value, index)
-    );
-  };
-  const createNavItem = (item, index) => {
-    return (
-      <nav>
-        <ul>
-          
-            <li key={index} className={props.cssClass}>
-            <Link to={item.link}>{item.text}</Link>
-            </li>
-        </ul>
-      </nav>
-    );
-  };
-  return (<>
-  <nav>
-    <ul>
-    {props.items.map((value, index) => checkNavItem(value, index))}
-      </ul>  
-  </nav>
-  
-  </>
+  return (
+    <Nav
+      className="right mr-auto my-2 my-lg-0"
+      style={{ maxHeight: "100px" }}
+      navbarScroll
+    >
+      {props.nav.map((value, index) => (
+        <NavItem link={value.link} text={value.text} />
+      ))}
+    </Nav>
   );
 }
+
+/*
+ <NavDropdown title="Link" id="navbarScrollingDropdown">
+        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+      </NavDropdown>
+*/
