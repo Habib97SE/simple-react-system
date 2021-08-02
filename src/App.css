@@ -327,3 +327,74 @@ p {
     width: 100%;
     max-height: 400px;
 }
+
+article {
+    width: 20%;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px #f0f0ff;
+}
+
+.login-btn {
+    font-size: 1.3rem;
+}
+
+.white-box {
+    margin-top: 100px;
+    width: 20%;
+    margin: auto;
+    padding: 15px;
+    border: 1px #f2f2f2;
+    padding: 10px;
+    box-shadow: 0 5px 10px #f2f2f2;
+    border-radius: 7px;
+
+}
+
+input {
+    background-color: #f2f2f2;
+}
+
+label {
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+
+.singup-text {
+    color: #000;
+}
+
+.singup-text:hover {
+    border-bottom: 1px solid #000;
+}
+
+.subnav a {
+    color: #000;
+}
+
+
+/*
+** Responsive design settings
+*/
+
+@media only screen and (max-width: 600px) {
+    .white-box {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 899px) {
+    .white-box {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    article {
+        width: 90%;
+        margin: auto;
+    }
+}

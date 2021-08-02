@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation/Navigation";
-import { Navbar, Form, FormControl, Button, Image } from "react-bootstrap";
+import { Navbar, Button } from "react-bootstrap";
 import Slider from "./Slider/Slider";
 
 export default function Header(props) {
@@ -22,18 +22,14 @@ export default function Header(props) {
       <Navbar bg="light" expand="lg" sticky="top">
         <Navbar.Brand href="/">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Navigation nav={props.navItem} />
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="mr-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
+        <Navigation nav={props.navItem} />
+        <Navbar.Collapse id="navbarScroll"></Navbar.Collapse>
+        <div className="right">
+          <Button variant="success">Get Started</Button>
+          <Button variant="outline-success">
+            <i class="fas fa-sign-in-alt"></i> Sign in
+          </Button>
+        </div>
       </Navbar>
       <div className="head-img">
         <Slider data={images} />
